@@ -1,0 +1,9 @@
+package com.solution.linkedlist;
+
+public class LinkedListNode<T extends Number> {
+	T data;
+	LinkedListNode<T> next;
+	public LinkedListNode(T data) {
+		this.data=data;
+	}
+}

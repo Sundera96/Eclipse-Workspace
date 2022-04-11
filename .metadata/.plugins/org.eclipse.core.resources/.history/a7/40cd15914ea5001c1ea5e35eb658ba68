@@ -1,0 +1,38 @@
+package com.java.datastructures.grap.adjacencylist;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+
+public class AdjacencyListGraph {
+	
+	public class ListNode{
+		LinkedList<String> edges;
+		public ListNode() {
+			edges = new LinkedList<String>();
+		}
+	}
+
+	ArrayList<String> vertices;
+	ListNode[] vertexEdges;
+	int numberOfVertices;
+	public AdjacencyListGraph(int numberOfVertices) {
+		vertexEdges = new ListNode[numberOfVertices];
+		vertices = new ArrayList<String>();
+		this.numberOfVertices=numberOfVertices;
+	}
+	
+	public void addVertex(String[] vertices) {
+		for(String eachVertex: vertices) {
+			this.vertices.add(eachVertex);
+		}
+	}
+	
+	public void addEdges(String source,String destination) {
+		int sourceIndex = vertices.indexOf(source);
+		int destinationIndex = vertices.indexOf(destination);
+		if(sourceIndex>=0&&sourceIndex<)
+		vertexEdges[sourceIndex].edges.add(destination);
+		vertexEdges[destinationIndex].edges.add(source);
+	}
+}
+

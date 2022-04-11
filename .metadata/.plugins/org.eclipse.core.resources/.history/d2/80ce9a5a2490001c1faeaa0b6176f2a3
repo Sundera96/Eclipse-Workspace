@@ -1,0 +1,116 @@
+package com.trees.problems.solution;
+
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
+
+
+public class TreeSolutions {
+
+	// find maximum element in binary tree
+	public int maxInBinaryTree(TreeNode<Integer> root) {
+		int maxVal = 0;
+		if(root==null) {
+			return 0;
+		}
+		int value1 =maxInBinaryTree(root.leftChild);
+		int value2 =maxInBinaryTree(root.rightChild);
+		if(value1<value2) {
+			maxVal = value2;
+		}else {
+			maxVal = value1;
+		}
+		if(root.data>maxVal) {
+			maxVal = root.data;
+		}
+		return maxVal;
+	}
+	// find maximum element in binary tree - 
+	public int maxInBinaryTree02(TreeNode<Integer> root) {
+		TreeNode<Integer> currNode;
+		Stack<TreeNode<Integer>> stack = new Stack<TreeNode<Integer>>();
+		stack.push(root);
+		int maxVal = 0;
+		while(!stack.isEmpty()) {
+			currNode = stack.pop();
+			if(currNode.data>maxVal)
+				maxVal = currNode.data;
+			if(currNode.leftChild!=null) {
+				stack.push(currNode.leftChild);
+			}
+			if(currNode.rightChild!=null) {
+				stack.push(currNode.rightChild);
+			}
+		}
+		return maxVal;
+	}
+	
+	public boolean findNodeInBinaryTree(TreeNode<Integer> root,int data) {
+		if(root==null) {
+			return false;
+		}
+		boolean leftChild = findNodeInBinaryTree(root.leftChild,data);
+		boolean rightChild = findNodeInBinaryTree(root.rightChild,data);
+		if(root.data==data) {
+			return true;
+		}
+		return leftChild||rightChild;
+	}
+	
+	public boolean findNodeInBinaryTreeNonRecursive(TreeNode<Integer> root,int data) {
+		Stack<TreeNode<Integer>> stack = new Stack<TreeNode<Integer>>();
+		stack.push(root);
+		while(!stack.isEmpty()) {
+			TreeNode<Integer> currNode = stack.pop();
+			if(currNode.data==data) {
+				return true;
+			}
+			if(currNode.rightChild!=null) {
+				stack.push(currNode.rightChild);
+			}
+			if(currNode.leftChild!=null) {
+				stack.push(currNode.leftChild);
+			}
+		}
+		return false;
+	}
+	
+	public TreeNode<Integer> insertInBinaryTreeLevelOrder(TreeNode<Integer> root,int data){
+		Queue<TreeNode<Integer>> queue = new LinkedList<TreeNode<Integer>>();
+		queue.offer(root);
+		boolean insertElement = false;
+		TreeNode<Integer> prevNode=null;
+		while(!insertElement) {
+			TreeNode<Integer> currNode = queue.poll();
+			if(currNode!=null) {
+				queue.offer(currNode.leftChild);
+				queue.offer(currNode.rightChild);
+			}
+			else if(currNode==null) {
+				if(prevNode.leftChild==null) {
+					prevNode.leftChild = new TreeNode<Integer>(data);
+				}else {
+					prevNode.rightChild = new TreeNode<Integer>(data);
+				}
+			}
+			prevNode = currNode;
+		}
+		return root;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

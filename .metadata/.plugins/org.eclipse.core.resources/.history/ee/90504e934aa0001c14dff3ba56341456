@@ -1,0 +1,14 @@
+package com.java.dsa.tree.heaps;
+
+public class BinaryHeap {
+
+	int[] heapArray;
+	int count;
+	int capacity;
+	int heapType;
+	
+	public BinaryHeap(int capacity,int heapType) {
+		this.capacity=capacity;
+		this.heapType=heapType;
+	}
+}

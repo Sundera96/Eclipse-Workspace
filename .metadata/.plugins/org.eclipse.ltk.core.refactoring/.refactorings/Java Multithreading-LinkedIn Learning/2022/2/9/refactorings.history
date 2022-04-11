@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.java.multithreading.producer.consumer.SoupProducer&apos; to &apos;ProducerConsumerDemo&apos;&#x0D;&#x0A;- Original project: &apos;Java Multithreading-LinkedIn Learning&apos;&#x0D;&#x0A;- Original element: &apos;com.java.multithreading.producer.consumer.SoupProducer&apos;&#x0D;&#x0A;- Renamed element: &apos;com.java.multithreading.producer.consumer.ProducerConsumerDemo&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;SoupProducer&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.java.multithreading.producer.consumer{SoupProducer.java[SoupProducer" matchStrategy="1" name="ProducerConsumerDemo" qualified="false" references="true" similarDeclarations="false" stamp="1645514624182" textual="false" version="1.0"/>
+</session>

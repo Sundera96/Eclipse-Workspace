@@ -1,0 +1,5 @@
+package com.java.datastructures.grap.adjacencylist;
+
+public class AdjacencyListGraph {
+
+}

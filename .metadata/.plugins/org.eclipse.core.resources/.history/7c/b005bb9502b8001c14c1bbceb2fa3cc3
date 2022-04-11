@@ -1,0 +1,25 @@
+package com.algorithms.sort.comparisonsort;
+
+public class SelectionSort {
+
+	public void selectionSortAlgorithm(int[] unsortedArray) {
+		for(int arrayIndex=0;arrayIndex<unsortedArray.length-1;arrayIndex++) {
+			int minVal = unsortedArray[arrayIndex];
+			for(int traverseIndex=arrayIndex+1;traverseIndex<unsortedArray.length-1;traverseIndex++) {
+				if(minVal>unsortedArray[]) {
+					
+				}
+			}
+		}
+	}
+	
+	
+	public static void main(String[] args) {
+		BubbleSort sort = new BubbleSort();
+		int[] array = {1,56,23,2,31,8,9};
+		sort.bubbleSort(array);
+		for(int eachVal:array) {
+			System.out.println(eachVal);
+		}
+	}
+}

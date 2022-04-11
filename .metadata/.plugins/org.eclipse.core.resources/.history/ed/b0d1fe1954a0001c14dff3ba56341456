@@ -1,0 +1,36 @@
+package com.java.dsa.tree.heaps;
+
+public class BinaryHeap {
+
+	int[] heapArray;
+	int count;
+	int capacity;
+	int heapType;
+	
+	public BinaryHeap(int capacity,int heapType) {
+		this.capacity=capacity;
+		this.heapType=heapType;
+	}
+	
+	public int parent(int i) {
+		if((i-1)/2>=0)
+			return (i-1)/2;
+		return -1;
+	}
+	
+	public int leftChildren(int index) {
+		int left = 2*index+1;
+		if(left>capacity) {
+			return -1;
+		}
+		return left;
+	}
+	
+	public int rightChildren(int index) {
+		int right = 2*index+2;
+		if(right>capacity) {
+			return -1;
+		}
+		return right;
+	}
+}

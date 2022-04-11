@@ -1,0 +1,35 @@
+package com.algorithms.sort.shellsort;
+
+public class ShellSort {
+
+	private void shellSort(int[] unSortedArray) {
+		for(int skipSortIndex = unSortedArray.length/2; skipSortIndex>0;skipSortIndex=skipSortIndex/2) {
+			for(int start = skipSortIndex;start<unSortedArray.length;start++) {
+				while(start>=skipSortIndex&& unSortedArray[start-skipSortIndex]>unSortedArray[start]) {
+					int temp = unSortedArray[start];
+					unSortedArray[start]=unSortedArray[start-skipSortIndex];
+					unSortedArray[start-skipSortIndex] = temp;
+				}
+				
+			}
+		}	
+	}
+	
+	private void shellSort2(int[] unSortedArray) {
+		int gap =0;
+		while(gap<unSortedArray.length)
+			gap = gap*3+1;
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		int[] array = {3,4,1,56,23,6,8,7,54,24};
+		ShellSort shellSortRunner = new ShellSort();
+		shellSortRunner.shellSort(array);
+		
+		for(int sortedVal: array) {
+			System.out.print(sortedVal+" ");
+		}
+	}
+}

@@ -1,0 +1,17 @@
+package com.java.datastructures.grap.adjacencylist;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+
+public class AdjacencyListGraph {
+	
+	public class ListNode{
+		LinkedList<String> edges;
+		public ListNode() {
+			edges = new LinkedList<String>();
+		}
+	}
+
+	ArrayList<String> vertices = new ArrayList<String>();
+	
+}

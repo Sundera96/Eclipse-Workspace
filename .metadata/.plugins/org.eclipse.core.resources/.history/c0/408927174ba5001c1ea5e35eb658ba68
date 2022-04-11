@@ -1,0 +1,9 @@
+package com.java.datastructures.grap.adjacencylist;
+
+import java.util.ArrayList;
+
+public class AdjacencyListGraph {
+
+	ArrayList<String> vertices = new ArrayList<String>();
+	
+}

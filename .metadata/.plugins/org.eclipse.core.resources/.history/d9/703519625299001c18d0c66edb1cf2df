@@ -1,0 +1,141 @@
+package com.trees.problems.binarysearchtree.impl;
+
+
+
+public class BinarySearchTree {
+	
+	public static void main(String[] args) {
+		BinarySearchTree runner = new BinarySearchTree();
+		TreeNode<Integer> root = runner.insert(null,6);
+//		runner.insert(root,2);
+//		runner.insert(root,1);
+//		runner.insert(root,1);
+//		runner.insert(root,8);
+//		runner.insert(root,4);
+//		runner.delete(root,150);
+		TreeNode<Integer> node10 = new TreeNode<Integer>(10);
+		TreeNode<Integer> node5 = new TreeNode<Integer>(5);
+		TreeNode<Integer> node9 = new TreeNode<Integer>(9);
+		TreeNode<Integer> node15 = new TreeNode<Integer>(15);
+		TreeNode<Integer> node3 = new TreeNode<Integer>(3);
+		TreeNode<Integer> node7 = new TreeNode<Integer>(7);
+		TreeNode<Integer> node12 = new TreeNode<Integer>(12);
+		TreeNode<Integer> node17 = new TreeNode<Integer>(7);
+		TreeNode<Integer> node4 = new TreeNode<Integer>(4);
+		
+		node10.leftChild=node5;
+		node10.rightChild=node15;
+		node5.leftChild=node3;
+		node5.rightChild=node7;
+		node3.rightChild=node4;
+		node7.rightChild=node9;
+		
+		runner.preOrderTraversal(root);
+		//System.out.println(runner.highestValuedNode(root).data);
+	}
+	
+	public void preOrderTraversal(TreeNode<Integer> root){
+		if(root==null)
+			return;
+		
+		
+		preOrderTraversal(root.leftChild);
+		System.out.println(root.data);
+		preOrderTraversal(root.rightChild);
+	}
+
+	public TreeNode<Integer> insert(TreeNode<Integer> root,int data) {
+		if(root==null) {
+			root = new TreeNode<Integer>(data);
+			root.leftChild=null;
+			root.rightChild=null;
+			return root;
+		}
+		else {
+			if(data<root.data) {
+				root.leftChild=insert(root.leftChild,data);
+			}
+			else if(data>root.data) {
+				root.rightChild=insert(root.rightChild,data);
+			}
+		}
+		return root;
+	}
+	
+	public TreeNode<Integer> delete(TreeNode<Integer> root, int data){
+		if(root==null) {
+			return null;
+		}
+		else if(data<root.data&&root.leftChild!=null) {
+			root.leftChild = delete(root.leftChild,data);
+		}
+		else if(data>root.data&&root.rightChild!=null) {
+			root.rightChild =  delete(root.rightChild,data);
+		}
+		else {
+			if(root.rightChild==null||root.leftChild==null) {
+				if(root.rightChild==null) {
+					return root.rightChild;
+				}else {
+					return root.leftChild;
+				}
+			}
+			else {
+				TreeNode<Integer> highVal = highestValuedNode(root.leftChild);
+				root.data = highVal.data;
+				return delete(root.leftChild,root.data);
+			}
+		}
+		return root;
+	}
+	
+	private TreeNode<Integer> highestValuedNode(TreeNode<Integer> root){
+		if(root==null) {
+			return null;
+		}
+		TreeNode<Integer> leftVal = null,rightVal=null,maxVal=null;
+		if(root.leftChild!=null) {
+			leftVal = highestValuedNode(root.leftChild);
+		}
+		if(root.rightChild!=null) {
+			rightVal=highestValuedNode(root.rightChild);
+		}
+		if(leftVal!=null&&rightVal!=null)
+			maxVal = leftVal.data>rightVal.data ? leftVal: rightVal;
+		else if(leftVal==null||rightVal==null) {
+				maxVal = leftVal==null ? rightVal:leftVal;
+		}
+		if(maxVal!=null)
+			return maxVal.data>root.data ? maxVal: root;
+		return root;
+	}
+	
+	public boolean isBST(TreeNode<Integer> root,int min,int max) {
+		if(root==null) {
+			return true;
+		}
+		return root.data>min&&root.data<max&&isBST(root.leftChild,min,root.data)&&isBST(root.rightChild,root.data,max);
+	}
+	
+	public TreeNode<Integer> binarySearchTreeToDLL(TreeNode<Integer> root,TreeNode<Integer> parentNode){
+		if(root==null) {
+			return null;
+		}
+		TreeNode<Integer> lNode = binarySearchTreeToDLL(root.leftChild,root);
+		if(parentNode.leftChild==root&&parentNode.rightChild==null) {
+			root.rightChild=parentNode;
+		}
+		if(lNode!=null) {
+			parentNode.leftChild=lNode;
+			lNode.rightChild=parentNode;
+		}
+		TreeNode<Integer> rNode = binarySearchTreeToDLL(root.rightChild,root);
+		
+		if(parentNode.rightChild==root) {
+			root.leftChild=parentNode;
+			return root;
+		}
+		
+		return lNode !=null ? lNode:rNode;
+	}
+}

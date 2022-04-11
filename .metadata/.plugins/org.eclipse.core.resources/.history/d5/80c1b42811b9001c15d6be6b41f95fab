@@ -1,0 +1,28 @@
+package com.algorithms.sort.comparisonsort;
+
+public class MergeSort {
+
+	public void mergeSortAlgorithm(int[] unsortedArray, int[] tempArray, int low, int high) {
+		if(low<high) {
+			int mid = (high-low)/2+low;
+			mergeSortAlgorithm(unsortedArray,tempArray,low,mid);
+			mergeSortAlgorithm(unsortedArray,tempArray,mid+1,high);
+			
+		}
+	}
+	
+	private void sorting(int[] unsortedArray, int[] tempArray, int low, int mid, int high) {
+		int tempLeft = low;
+		int leftArrayEnd = mid-1;
+		
+		while(low<=leftArrayEnd&&mid<=high) {
+			if(unsortedArray[low]<unsortedArray[mid]) {
+				tempArray[tempLeft++]=unsortedArray[low];
+				low+=1;
+			}else {
+				tempArray[tempLeft++]=unsortedArray[mid];
+				low+=1;
+			}
+		}
+	}
+}
