@@ -1,25 +1,12 @@
 
 
-public class TestingGenerics<T> {
+public class TestingGenerics {
 
 	public static void main(String[] args) {
-		TestingGenerics<Integer> runnerGenerics = new TestingGenerics<Integer>();
-		//TestingGenerics runnerGenerics = new TestingGenerics();
-		runnerGenerics.test();
-	}
-	
-	public void test() {
-		Object[] array = new Object[5];
+		long val = 2147483647;
+		val+=10;
+		System.out.println(val);
 		
-		Custom[] val3 = (Custom[])array;
-		
-		//throws class cast exception
-		//Integer [] val = (Integer[]) array;
-		//works well
-		Custom val2 = (Custom)array[0];
-	}
-	
-	class Custom{
-		int[] array;
+		int[] arr = new int[Math.abs((int) val)];
 	}
 }

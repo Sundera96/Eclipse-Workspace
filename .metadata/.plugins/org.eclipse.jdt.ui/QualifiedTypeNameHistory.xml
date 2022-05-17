@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.datastructure.unrolledlinked.implementation.UnRolledLinkedListImpl"/>
     <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
-    <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="com.list.skip.impl.SkipListImpl"/>
     <fullyQualifiedTypeName name="com.solution.linkedlist.LinkedListImpl.LinkedListNode"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
@@ -18,23 +16,18 @@
     <fullyQualifiedTypeName name="com.trees.avl.impl.AVLTreeRunner"/>
     <fullyQualifiedTypeName name="java.util.concurrent.ForkJoinPool"/>
     <fullyQualifiedTypeName name="java.util.concurrent.RecursiveTask"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="com.datastructure.unrolledlinked.implementation2.UnRolledLinkedListImpl"/>
     <fullyQualifiedTypeName name="javax.management.RuntimeErrorException"/>
     <fullyQualifiedTypeName name="java.util.Queue"/>
-    <fullyQualifiedTypeName name="java.util.LinkedList"/>
     <fullyQualifiedTypeName name="com.java.datastructures.graph.shortestpathalgo.unweighted.GraphAdjacency"/>
     <fullyQualifiedTypeName name="com.java.datastructures.graph.shortestpathalgo.unweighted.GraphAdjacency.ListNode"/>
     <fullyQualifiedTypeName name="com.java.datastructures.graph.shortestpathalgo.unweighted.ShortestPathAlgorithmRunner"/>
-    <fullyQualifiedTypeName name="java.util.HashMap"/>
-    <fullyQualifiedTypeName name="java.util.Comparator"/>
     <fullyQualifiedTypeName name="java.lang.Object"/>
     <fullyQualifiedTypeName name="com.java.datastructures.graph.dijkstra.DijkstraGraph.WeightedEdge"/>
     <fullyQualifiedTypeName name="com.java.datastructures.graph.dijkstra.DijkstraGraph.Node"/>
     <fullyQualifiedTypeName name="com.java.datastructures.graph.primsalgo.PrimsAlgorithm"/>
     <fullyQualifiedTypeName name="com.java.datastructures.graph.primsalgo.GraphNode"/>
     <fullyQualifiedTypeName name="com.java.datastructures.graph.primsalgo.GraphNode.Edge"/>
-    <fullyQualifiedTypeName name="java.util.PriorityQueue"/>
     <fullyQualifiedTypeName name="com.java.datastructures.grap.krushkals.DisjointSets"/>
     <fullyQualifiedTypeName name="java.io.Serial"/>
     <fullyQualifiedTypeName name="com.java.datastructures.grap.adjacencylist.AdjacencyListGraph"/>
@@ -43,11 +36,28 @@
     <fullyQualifiedTypeName name="java.util.Stack"/>
     <fullyQualifiedTypeName name="com.java.datastructures.grap.adjacencylist.AdjacencyListGraphDirectedEdges"/>
     <fullyQualifiedTypeName name="java.util.Iterator"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="edu.coursera.parallel.Student"/>
     <fullyQualifiedTypeName name="java.util.concurrent.Phaser"/>
     <fullyQualifiedTypeName name="java.util.concurrent.ExecutorService"/>
     <fullyQualifiedTypeName name="java.util.concurrent.Executors"/>
     <fullyQualifiedTypeName name="java.lang.Thread"/>
     <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="java.text.DecimalFormat"/>
+    <fullyQualifiedTypeName name="java.util.PriorityQueue"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="com.algorithms.sort.problems.SortingProblems.QueueNode"/>
+    <fullyQualifiedTypeName name="com.solution.linkedlist.LinkedListNode"/>
+    <fullyQualifiedTypeName name="javax.sound.sampled.Line"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="com.algorithms.string.StringSearchAlgorithms"/>
+    <fullyQualifiedTypeName name="com.algorithms.string.ternarysearchtree.TernarySearchTree.TernaryNode"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.util.Comparator"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="java.math.BigInteger"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.LinkedList"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.util.HashSet"/>
 </qualifiedTypeNameHistroy>
